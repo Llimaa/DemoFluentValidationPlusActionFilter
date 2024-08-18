@@ -1,0 +1,6 @@
+@DemoFluentValidationPlusActionFilterPlusActionFilter_HostAddress = http://localhost:5106
+
+GET {{DemoFluentValidationPlusActionFilterPlusActionFilter_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
