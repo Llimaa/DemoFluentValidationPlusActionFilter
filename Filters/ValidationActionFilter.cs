@@ -24,10 +24,9 @@ public class ValidationActionFilter : IActionFilter
                 if (!result.IsValid)
                 {
                     var errorResponse = new ErrorResponse(400);
+
                     foreach (var error in result.Errors)
-                    {
-                        errorResponse.Errors.Add(error.PropertyName, error.ErrorMessage);   
-                    }
+                        errorResponse.Errors.Add(error.PropertyName, error.ErrorMessage);
 
                     context.Result = new BadRequestObjectResult(errorResponse);
                 }
